@@ -81,6 +81,8 @@
 
     background-color: $primary-accent-color;
     border-radius: 20px;
+
+    @include transition(background-color);
   }
 
   .section-hero__link:hover,
@@ -180,8 +182,10 @@
 
     &:hover,
     &:focus {
-      background-color: $background-grey-color;
+      background-color: $primary-accent-color;
     }
+
+    @include transition(fill, background-color);
   }
 
   .section-hero__icon {
@@ -190,9 +194,9 @@
 
     fill: $primary-accent-color;
 
-    &:hover,
-    &:focus {
-      fill: #c7133e;
+    .section-hero__icon-link:hover &,
+    .section-hero__icon-link:focus & {
+      fill: $primary-white-color;
     }
   }
 
@@ -329,14 +333,8 @@
   }
 
   .section-hero__icon {
-    fill: $primary-accent-color;
     width: 8px;
     height: 8px;
-
-    &:hover,
-    &:focus {
-      fill: #c7133e;
-    }
   }
 
   .section-hero__list-branches {
