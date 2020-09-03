@@ -1,45 +1,45 @@
 .section-hero {
-  overflow: hidden;
   position: relative;
+
   margin: 0 auto;
-  background-color: $section-pink-color;
+
+  background-color: $hero-backgorund-color;
+  overflow: hidden;
+}
+
+.section-hero__background {
+  position: relative;
+
+  margin: 0 auto;
+  width: 320px;
+  padding-top: 83px;
+  padding-left: 36px;
+  padding-bottom: 75px;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 346px;
+    height: 344px;
+
+    background-color: $contacts-pink-color;
+    border-radius: 50%;
+  }
 }
 
 .section-hero__container {
-  position: relative;
-  height: 502px;
+  position: absolute;
+  top: 0;
+  left: 0;
 
   background-image: url('../images/hero/ice-cream-mobile.svg');
   background-repeat: no-repeat;
   background-position: top 92px left 117px;
 }
 
-.section-hero__box {
-  position: relative;
-  margin: 0 auto;
-  width: 320px;
-}
-
-.section-hero__background {
-  position: absolute;
-  margin: 0 auto;
-  width: 320px;
-  height: 502px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 83px;
-    left: 36px;
-    display: block;
-    width: 346px;
-    height: 344px;
-    background-color: $contacts-pink-color;
-    border-radius: 50%;
-  }
-}
-
 .section-hero__title {
+  margin: 0;
+  padding: 0;
   padding-top: 193px;
   margin-bottom: 19px;
 
@@ -61,6 +61,7 @@
 
 .section-hero__list-btn {
   display: flex;
+  padding-bottom: 160px;
 
   .section-hero__item-link:not(:last-child) {
     margin-right: 8px;
@@ -110,31 +111,26 @@
 }
 
 @media screen and (min-width: 768px) {
-  .section-hero__container {
-    height: 399px;
+  .section-hero__background {
+    width: 768px;
+    padding-top: 31px;
+    padding-left: 307px;
+    padding-right: 137px;
+    padding-bottom: 46px;
 
+    &::before {
+      width: 324px;
+      height: 322px;
+    }
+  }
+
+  .section-hero__container {
     background-image: url('../images/hero/ice-cream-tablet.svg'),
       url('../images/hero/milk-tablet.svg'),
       url('../images/hero/girl-tablet.svg');
     background-repeat: no-repeat;
     background-position: top 63px left 378px, left 34px bottom 28px,
       right 34px bottom;
-  }
-
-  .section-hero__box {
-    width: 768px;
-  }
-
-  .section-hero__background {
-    width: 768px;
-    height: 399px;
-
-    &::before {
-      top: 31px;
-      left: 307px;
-      width: 324px;
-      height: 322px;
-    }
   }
 
   .section-hero__title {
@@ -152,11 +148,14 @@
   }
 
   .section-hero__list-btn {
+    padding-bottom: 0;
     margin-bottom: 66px;
   }
 
   .section-hero__text {
     display: block;
+    margin: 0;
+    padding: 0;
     width: 255px;
     padding-left: 120px;
 
@@ -164,26 +163,52 @@
     font-size: 8px;
     line-height: 1.5;
     color: $primary-white-color;
+  }
 
-    &::after {
-      content: '';
-      display: block;
-      margin-top: 7px;
-      width: 18px;
-      height: 18px;
-      background-image: url('../images/hero/arrow-right-tablet.svg');
+  .section-hero__icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7px;
+    margin-left: 120px;
+    margin-bottom: 34px;
+    width: 18px;
+    height: 18px;
+
+    background-color: $primary-white-color;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      background-color: $background-grey-color;
+    }
+  }
+
+  .section-hero__icon {
+    width: 5px;
+    height: 5px;
+
+    fill: $primary-accent-color;
+
+    &:hover,
+    &:focus {
+      fill: #c7133e;
     }
   }
 
   .section-hero__list-branches {
     position: absolute;
     top: 94px;
-    right: 34px;
+    right: 43px;
+
     display: block;
   }
 
   .section-hero__item-branches {
     position: relative;
+
+    margin: 0;
+    padding: 0;
 
     &::before {
       content: '';
@@ -206,6 +231,8 @@
   .section-hero__branches-count {
     position: relative;
     z-index: 1;
+    margin: 0;
+    padding: 0;
 
     font-family: 'Titan One', sans-serif;
     font-weight: 400;
@@ -218,6 +245,9 @@
   }
 
   .section-hero__branches-text {
+    margin: 0;
+    padding: 0;
+
     font-weight: 400;
     font-size: 8px;
     line-height: 1.25;
@@ -227,31 +257,26 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .section-hero__container {
-    height: 665px;
+  .section-hero__background {
+    width: 1200px;
+    padding-top: 52px;
+    padding-left: 435px;
+    padding-right: 227px;
+    padding-bottom: 75px;
 
+    &::before {
+      width: 538px;
+      height: 538px;
+    }
+  }
+
+  .section-hero__container {
     background-image: url('../images/hero/ice-cream-desktop.svg'),
       url('../images/hero/milk-desktop.svg'),
       url('../images/hero/girl-desktop.svg');
     background-repeat: no-repeat;
     background-position: top 108px left 554px, left 37px bottom 45px,
       right 69px bottom;
-  }
-
-  .section-hero__box {
-    width: 1200px;
-  }
-
-  .section-hero__background {
-    width: 1200px;
-    height: 665px;
-
-    &::before {
-      top: 52px;
-      left: 435px;
-      width: 538px;
-      height: 538px;
-    }
   }
 
   .section-hero__title {
@@ -292,24 +317,38 @@
 
     font-size: 14px;
     line-height: 1.4;
+  }
 
-    &::after {
-      content: '';
-      display: block;
-      margin-top: 20px;
-      width: 26px;
-      height: 26px;
-      background-image: url('../images/hero/arrow-right-desktop.svg');
+  .section-hero__icon-link {
+    margin-top: 0;
+    margin-left: 180px;
+    margin-top: 20px;
+    margin-bottom: 56px;
+    width: 26px;
+    height: 26px;
+  }
+
+  .section-hero__icon {
+    fill: $primary-accent-color;
+    width: 8px;
+    height: 8px;
+
+    &:hover,
+    &:focus {
+      fill: #c7133e;
     }
   }
 
   .section-hero__list-branches {
-    top: 160px;
+    top: 156px;
     right: 75px;
   }
 
   .section-hero__item-branches {
     position: relative;
+
+    margin: 0;
+    padding: 0;
 
     &::before {
       position: absolute;
@@ -339,7 +378,6 @@
 }
 
 .section-hero__container {
-  margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
 
