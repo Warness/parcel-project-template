@@ -1,10 +1,15 @@
-.product {
-  position: relative;
+.modal-wrapper {
+  display: relative;
   overflow: hidden;
 }
 
+// .product {
+//   position: relative;
+//   overflow: hidden;
+// }
+
 .modal-container {
-  max-width: 250px;
+  // max-width: 250px;
 
   @media screen and (min-width: 1200px) {
     display: none;
@@ -21,6 +26,11 @@
   z-index: 5;
   transform: translateX(-100%);
   @include transition(transform 1s);
+
+  @media screen and (min-width: 768px) {
+    width: 300px;
+    height: 1000px;
+  }
 }
 
 .modal.is-hidden {
