@@ -117,83 +117,21 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\images\\hero\\ice-cream-mobile.svg":[["ice-cream-mobile.2a0702b5.svg","images/hero/ice-cream-mobile.svg"],"images/hero/ice-cream-mobile.svg"],"./..\\images\\hero\\ice-cream-tablet.svg":[["ice-cream-tablet.b7e3935b.svg","images/hero/ice-cream-tablet.svg"],"images/hero/ice-cream-tablet.svg"],"./..\\images\\hero\\milk-tablet.svg":[["milk-tablet.ea6b9f80.svg","images/hero/milk-tablet.svg"],"images/hero/milk-tablet.svg"],"./..\\images\\hero\\girl-tablet.svg":[["girl-tablet.f5f86707.svg","images/hero/girl-tablet.svg"],"images/hero/girl-tablet.svg"],"./..\\images\\hero\\ice-cream-desktop.svg":[["ice-cream-desktop.08ab184f.svg","images/hero/ice-cream-desktop.svg"],"images/hero/ice-cream-desktop.svg"],"./..\\images\\hero\\milk-desktop.svg":[["milk-desktop.12cc9050.svg","images/hero/milk-desktop.svg"],"images/hero/milk-desktop.svg"],"./..\\images\\hero\\girl-desktop.svg":[["girl-desktop.869fe817.svg","images/hero/girl-desktop.svg"],"images/hero/girl-desktop.svg"],"./..\\images\\product-circles-icon.svg":[["product-circles-icon.831a7b3b.svg","images/product-circles-icon.svg"],"images/product-circles-icon.svg"],"./..\\images\\how-its-made\\sectionbg.png":[["sectionbg.c9af74b0.png","images/how-its-made/sectionbg.png"],"images/how-its-made/sectionbg.png"],"./..\\images\\how-its-made\\sectionbg@2x.png":[["sectionbg@2x.6b22b08b.png","images/how-its-made/sectionbg@2x.png"],"images/how-its-made/sectionbg@2x.png"],"./..\\images\\how-its-made\\vector.svg":[["vector.5b7111c2.svg","images/how-its-made/vector.svg"],"images/how-its-made/vector.svg"],"./..\\images\\how-its-made\\icon1.svg":[["icon1.d5b470b4.svg","images/how-its-made/icon1.svg"],"images/how-its-made/icon1.svg"],"./..\\images\\how-its-made\\icon2.svg":[["icon2.c400a047.svg","images/how-its-made/icon2.svg"],"images/how-its-made/icon2.svg"],"./..\\images\\how-its-made\\icon3.svg":[["icon3.e2ffd00b.svg","images/how-its-made/icon3.svg"],"images/how-its-made/icon3.svg"],"./..\\images\\how-its-made\\sectionbg-desktop.png":[["sectionbg-desktop.44a6df1b.png","images/how-its-made/sectionbg-desktop.png"],"images/how-its-made/sectionbg-desktop.png"],"./..\\images\\how-its-made\\sectionbg-desktop@2x.png":[["sectionbg-desktop@2x.824cdbc2.png","images/how-its-made/sectionbg-desktop@2x.png"],"images/how-its-made/sectionbg-desktop@2x.png"],"C:\\Projects\\Homeworks GoIT\\Team-project\\team-project\\src\\images\\sectionbg2-1-min.png":[["sectionbg2-1-min.429f410e.png","images/sectionbg2-1-min.png"],"images/sectionbg2-1-min.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"js/slider.js":[function(require,module,exports) {
+$(document).ready(function () {
+  $('.comments-slider').slick({
+    arrows: false,
+    dots: true,
+    adaptiveHeight: true,
+    speed: 300,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    waitForAnimate: false,
+    centerMode: true,
+    fade: true
+  });
+});
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -397,5 +335,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/slider.js"], null)
+//# sourceMappingURL=/slider.d16eec5e.js.map
