@@ -1,0 +1,128 @@
+.contacts-city {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.83;
+  margin-top: 25px;
+
+  letter-spacing: 0.04em;
+
+  color: $primary-black-color;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.85;
+    margin-top: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 1.87;
+    margin-top: 32px;
+  }
+}
+
+.contacts-item-desc {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  color: $text-grey-color;
+
+  margin-top: 10px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.64;
+    margin-top: 14px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 1.81;
+    margin-top: 10px;
+  }
+}
+
+.contacts-item-graph::after {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 0px;
+  width: 100%;
+  border: 1px solid $decorative-grey-color;
+
+  left: 0;
+  top: -32px;
+}
+.contacts-item-graph::before {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 0px;
+  width: 100%;
+  border: 1px solid $decorative-grey-color;
+
+  left: 0;
+  top: 160px;
+}
+.contacts-item-graph {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.83;
+
+  letter-spacing: 0.04em;
+
+  color: $primary-black-color;
+
+  margin-top: 50px;
+  position: relative;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.85;
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 1.87;
+    margin-top: 64px;
+  }
+}
+.graph-weekdays {
+  padding-bottom: 10px;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 15px;
+  }
+}
+.time {
+  color: $contacts-pink-color;
+}
+
+.contacts-adress {
+  font-size: 12px;
+  line-height: 1.5;
+
+  margin-top: 50px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.85;
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 1.81;
+    margin-top: 64px;
+  }
+}
+.contacts-item-adress {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: $text-grey-color;
+}
