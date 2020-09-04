@@ -1,3 +1,6 @@
+.about-author-section {
+  border-top: 1px solid #e1e1e1;
+}
 .footer-copyright {
   padding-top: 22px;
   padding-bottom: 25px;
@@ -7,23 +10,25 @@
   text-align: center;
   color: $text-grey-color;
   text-transform: capitalize;
-  border-top: 1px solid #e1e1e1;
+
   text-align: center;
 
   @media screen and (max-width: 767px) {
-    padding-left: 79px;
-    padding-right: 91px;
+    width: 150px;
+    margin: auto;
   }
 
   @media screen and (min-width: 768px) {
     line-height: 1.85;
     letter-spacing: 0.02em;
+    padding-top: 29px;
     padding-bottom: 18px;
   }
   @media screen and (min-width: 1200px) {
     line-height: 1.85;
     letter-spacing: 0.02em;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 9px;
   }
 }
 
