@@ -47,26 +47,32 @@
 }
 
 .contacts-item-graph::after {
-  position: absolute;
   display: block;
   content: '';
   height: 0px;
   width: 100%;
   border: 1px solid $decorative-grey-color;
 
-  left: 0;
-  top: -32px;
+  margin-top: 30px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 25px;
+    }
 }
 .contacts-item-graph::before {
-  position: absolute;
   display: block;
   content: '';
   height: 0px;
   width: 100%;
   border: 1px solid $decorative-grey-color;
+  margin-bottom: 32px;
 
-  left: 0;
-  top: 160px;
+  @media screen and (max-width: 767px) {
+  margin-bottom: 25px;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 25px;
+    }
 }
 .contacts-item-graph {
   font-family: DM Sans;
@@ -79,17 +85,17 @@
 
   color: $primary-black-color;
 
-  margin-top: 50px;
+  margin-top: 25px;
   position: relative;
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 1.85;
-    margin-top: 60px;
+    margin-top: 30px;
   }
   @media screen and (min-width: 1200px) {
     font-size: 16px;
     line-height: 1.87;
-    margin-top: 64px;
+    margin-top: 32px;
   }
 }
 .graph-weekdays {
@@ -106,17 +112,17 @@
   font-size: 12px;
   line-height: 1.5;
 
-  margin-top: 50px;
+  margin-top: 25px;
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 1.85;
-    margin-top: 60px;
+    margin-top: 30px;
   }
   @media screen and (min-width: 1200px) {
     font-size: 16px;
     line-height: 1.81;
-    margin-top: 64px;
+    margin-top: 32px;
   }
 }
 .contacts-item-adress {
