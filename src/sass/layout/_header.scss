@@ -48,7 +48,8 @@
   color: $primary-accent-color;
 
   cursor: pointer;
-
+  @include transition(background-color); 
+  
   .greater-icon {
     margin-left: 12px;
   }
