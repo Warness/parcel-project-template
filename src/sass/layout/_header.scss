@@ -82,10 +82,6 @@
     // padding-top: 37px;
   }
 
-  .logo-link {
-    flex-grow: 2;
-  }
-
   .menu-wrapper-list {
     display: none;
   }
@@ -138,10 +134,12 @@
 }
 
 .burger-btn {
+  margin-left: auto;
   align-items: center;
   background-color: transparent;
   border: none;
   stroke: $primary-accent-color;
+  @include transition(stroke);
 
   &:hover,
   &:focus {
