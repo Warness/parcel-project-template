@@ -394,8 +394,6 @@ svg {
 
   .burger-btn {
     display: none;
-    width: 18px;
-    height: 18px;
   }
 
   .menu-wrapper-list {
@@ -2007,6 +2005,7 @@ svg {
 }
 .locations:focus, .locations:hover {
   background-color: #c7133e;
+  cursor: pointer;
 }
 
 .franchise {
@@ -2022,6 +2021,7 @@ svg {
 }
 .franchise:focus, .franchise:hover {
   background-color: #ecebeb;
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   .franchise {
