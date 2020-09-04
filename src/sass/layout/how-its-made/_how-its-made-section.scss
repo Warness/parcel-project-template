@@ -33,7 +33,7 @@
     line-height: 1.16;
     text-align: center;
     text-transform: uppercase;
-    color: #FFA5BA;
+    color: $contacts-pink-color;
     margin: 0;
 }
 .how-its-made-h1 {
@@ -45,7 +45,7 @@
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #D41443;
+    color: $primary-accent-color;
     width: 200px;
     margin-top: 15px;
     margin-right: auto;
@@ -92,16 +92,21 @@
     margin-left: auto;
     margin-right: auto;
         .how-its-made-p-1 {
-            color: #000000;
+            color: $primary-black-color;
+            margin-bottom: 35px;
         }
         .how-its-made-p-2 {
-            color: #907E82;
+            color: $text-grey-color;
+            margin-bottom: 15px;
+        }
+        .how-its-made-p-3 {
+            color: $text-grey-color; 
         }
 }
 .read-more-button {
     width: 176px;
     height: 44px;
-    background: #FFFFFF;
+    background: $primary-white-color;
     border-radius: 22px;
     border-color: transparent;
     padding: 0;
@@ -111,6 +116,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include transition (background-color);
         &:hover {
             background-color: #E5E5E5;
         }
@@ -123,13 +129,13 @@
     line-height: 1.29;
     display: flex;
     align-items: center;
-    color: #D41443;
+    color: $primary-accent-color;
         &::after {
             content: " ";
             display: block;
             width: 6.43px;
             height: 11px;           
-            fill: #D41443;
+            fill: $primary-accent-color;
             margin-left: 13px;
             background-image: url(../images/how-its-made/vector.svg);
             background-repeat: no-repeat;
@@ -192,7 +198,7 @@
     line-height: 1.14;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #D41443;
+    color: $primary-accent-color;
     margin-bottom: 14px;
 }
 .how-its-made-item-description {
@@ -202,7 +208,7 @@
     font-weight: bold;
     font-size: 12px;
     line-height: 1.66;
-    color: #000000;
+    color: $primary-black-color;
 }
 @media screen and (min-width: 768px) {
     .how-its-made-section {
@@ -233,12 +239,18 @@
     }
     .how-its-made-p {
         font-size: 14px;
-        line-height: 1.76;
+        line-height: 1.72;
         width: 340px;
-        margin-top: 50px;
+        margin-top: 45px;
         margin-right: 0;
         margin-bottom: 62px;
         margin-left: 0;
+            .how-its-made-p-1 {
+                margin-bottom: 26px;
+            }
+            .how-its-made-p-2 {
+                margin-bottom: 10px;
+            }
     }
     .how-its-made-div {
         background-image: none;
@@ -305,7 +317,7 @@
     .background-image {
         background-image: url(../images/how-its-made/sectionbg-desktop.png);
         background-position: 50% 19%;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat; 
     }
     @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
@@ -322,11 +334,17 @@
         margin-right: 74px;
     }
     .how-its-made-p {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 1.75;
         width: 463px;
         margin-top: 47px;
         margin-bottom: 45px;
+            .how-its-made-p-1 {
+                margin-bottom: 35px;
+            }
+            .how-its-made-p-2 {
+                margin-bottom: 27px;
+            }
     }
     .how-its-made-div {
         display: flex; 
