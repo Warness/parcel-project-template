@@ -1,7 +1,6 @@
 <section class="section-hero">
   <include src="./partials/modal.html"></include>
-  <div class="section-hero__box">
-    <div class="section-hero__background"></div>
+  <div class="section-hero__background">
     <div class="section-hero__container">
       <h1 class="section-hero__title">
         ice cream<br />
@@ -20,10 +19,12 @@
       </ul>
       <ul class="section-hero__list-btn">
         <li class="section-hero__item-link">
-          <a class="section-hero__link" href="">Products</a>
+          <a class="section-hero__link" href="#our-products">Products</a>
         </li>
         <li class="section-hero__item-link">
-          <a class="section-hero__link section-hero__link--color" href=""
+          <a
+            class="section-hero__link section-hero__link--color"
+            href="#how-its-made"
             >How it’s made?</a
           >
         </li>
@@ -32,6 +33,15 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et
       </p>
+      <a
+        class="section-hero__icon-link"
+        aria-label="link to ice-coffee page"
+        href="#bio-eco"
+      >
+        <svg class="section-hero__icon">
+          <use href="./images/sprite.svg#arrow-right-icon"></use>
+        </svg>
+      </a>
     </div>
   </div>
 </section>

@@ -7,25 +7,22 @@
 .him-img {
     display: block;
     width: 100%;
-    height: auto;
+    max-height: 403px;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     margin: 0 auto;
     transform: translateY(64px);
+
+    @media screen and (min-width: 320px) {
+        transform: translateY(74px);
+    }
 }
 @media screen and (min-width: 320px) {
     .him-img {
         width: 320px;
-        height: 107px;
-    }
-}   
-@media screen and (min-width: 364px) {
-    .him-img {
-        width: 364px;
         height: 122px;
-        transform: translateY(74px);
     }
 }
 .how-its-made-h2 {
@@ -74,7 +71,7 @@
 .him-pic {
     display: flex;
     width: 100%;
-    height: auto;
+    max-height: 516px;
     margin: 0 auto;
 }
 @media screen and (min-width: 320px) {
@@ -215,7 +212,7 @@
     .him-img {
         width: 768px;
         height: 258px;
-        transform: translateY(158px);
+        transform: translateY(155px);
     }
     .how-its-made-h2 {
         font-size: 26px;
@@ -282,13 +279,6 @@
     .how-its-made-item-description {
         font-size: 14px;
         line-height: 1.70;
-    }
-}
-@media screen and (min-width: 786px) {
-    .him-img {
-        width: 786px;
-        height: 264px;
-        transform: translateY(159px);
     }
 }
 @media screen and (min-width: 1200px) {

@@ -1,29 +1,29 @@
 .footer-copyright {
   padding-top: 22px;
   padding-bottom: 25px;
-  padding-left: 59px;
-  padding-right: 71px;
-  font-family: DM Sans;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
-  color: #907e82;
+  color: $text-grey-color;
   text-transform: capitalize;
+  border-top: 1px solid #e1e1e1;
+  text-align: center;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (max-width: 767px) {
+    padding-left: 79px;
+    padding-right: 91px;
+  }
+
+  @media screen and (min-width: 768px) {
     line-height: 1.85;
     letter-spacing: 0.02em;
     padding-bottom: 18px;
-    padding-left: 0px;
-    padding-right: 0px;
   }
-  @media screen and (min-width: 1050px) {
+  @media screen and (min-width: 1200px) {
     line-height: 1.85;
     letter-spacing: 0.02em;
-    padding-bottom: 10px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-bottom: 20px;
   }
 }
 
