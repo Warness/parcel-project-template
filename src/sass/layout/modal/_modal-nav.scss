@@ -3,9 +3,7 @@
 }
 
 .modal-item {
-  border: none;
-  padding-top: 12px;
-  padding-bottom: 12px;
+height: 40px;
   &:first-child {
     border-top: 1px solid #e18298;
   }
@@ -14,6 +12,10 @@
 }
 
 .modal-link {
+  display: block;
+  border: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
   color: $primary-white-color;
   font-weight: 700;
   font-size: 14px;
