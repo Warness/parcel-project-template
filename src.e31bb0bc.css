@@ -324,10 +324,9 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 37px;
-  padding-right: 37px;
   min-height: 44px;
   min-width: 160px;
+  border: none;
   border-radius: 22px;
   background-color: #fff;
   border-color: transparent;
@@ -347,7 +346,7 @@ svg {
 
 @media screen and (max-width: 767px) {
   .header-container {
-    padding-top: 6px;
+    margin-top: 6px;
   }
 
   .menu-wrapper-list,
@@ -361,7 +360,7 @@ svg {
   }
 
   .header-container {
-    padding-top: 37px;
+    margin-top: 37px;
   }
 
   .logo-link {
@@ -378,7 +377,7 @@ svg {
 }
 @media screen and (min-width: 1200px) {
   .header-container {
-    padding-top: 39px;
+    margin-top: 39px;
   }
 
   .header-wrapper {
@@ -408,6 +407,8 @@ svg {
   padding-top: 10px;
   padding-bottom: 10px;
   color: #fff;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-wrapper-list-item-link:hover, .menu-wrapper-list-item-link:focus {
   color: #d41443;
@@ -515,6 +516,10 @@ svg {
 }
 
 .section-hero__text {
+  display: none;
+}
+
+.section-hero__icon-link {
   display: none;
 }
 
@@ -994,10 +999,14 @@ svg {
   fill: #fff;
 }
 
+.margin-top {
+  margin-top: 46px;
+}
+
 .how-its-made-section {
   padding-top: 125px;
   padding-bottom: 145px;
-  background-color: #FFF5F6;
+  background-color: #fff5f6;
   position: relative;
 }
 
@@ -1032,7 +1041,7 @@ svg {
   line-height: 1.16;
   text-align: center;
   text-transform: uppercase;
-  color: #FFA5BA;
+  color: #ffa5ba;
   margin: 0;
 }
 
@@ -1045,7 +1054,7 @@ svg {
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #D41443;
+  color: #d41443;
   width: 200px;
   margin-top: 15px;
   margin-right: auto;
@@ -1086,22 +1095,26 @@ svg {
   font-size: 12px;
   line-height: 1.58;
   width: 220px;
-  margin-top: 46px;
   margin-bottom: 17px;
   margin-left: auto;
   margin-right: auto;
 }
 .how-its-made-p .how-its-made-p-1 {
-  color: #000000;
+  color: #000;
+  margin-bottom: 35px;
 }
 .how-its-made-p .how-its-made-p-2 {
-  color: #907E82;
+  color: #907e82;
+  margin-bottom: 15px;
+}
+.how-its-made-p .how-its-made-p-3 {
+  color: #907e82;
 }
 
 .read-more-button {
   width: 176px;
   height: 44px;
-  background: #FFFFFF;
+  background: #fff;
   border-radius: 22px;
   border-color: transparent;
   padding: 0;
@@ -1111,9 +1124,11 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .read-more-button:hover {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 .read-more-span {
@@ -1124,14 +1139,14 @@ svg {
   line-height: 1.29;
   display: flex;
   align-items: center;
-  color: #D41443;
+  color: #d41443;
 }
 .read-more-span::after {
   content: " ";
   display: block;
   width: 6.43px;
   height: 11px;
-  fill: #D41443;
+  fill: #d41443;
   margin-left: 13px;
   background-image: url(/vector.5b7111c2.svg);
   background-repeat: no-repeat;
@@ -1193,7 +1208,7 @@ svg {
   line-height: 1.14;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #D41443;
+  color: #d41443;
   margin-bottom: 14px;
 }
 
@@ -1204,7 +1219,7 @@ svg {
   font-weight: bold;
   font-size: 12px;
   line-height: 1.66;
-  color: #000000;
+  color: #000;
 }
 
 @media screen and (min-width: 768px) {
@@ -1241,12 +1256,18 @@ svg {
 
   .how-its-made-p {
     font-size: 14px;
-    line-height: 1.76;
+    line-height: 1.72;
     width: 340px;
-    margin-top: 50px;
+    margin-top: 45px;
     margin-right: 0;
     margin-bottom: 62px;
     margin-left: 0;
+  }
+  .how-its-made-p .how-its-made-p-1 {
+    margin-bottom: 26px;
+  }
+  .how-its-made-p .how-its-made-p-2 {
+    margin-bottom: 10px;
   }
 
   .how-its-made-div {
@@ -1325,7 +1346,7 @@ svg {
   .background-image {
     background-image: url(/sectionbg-desktop.44a6df1b.png);
     background-position: 50% 19%;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 }
@@ -1343,11 +1364,17 @@ svg {
 }
 @media screen and (min-width: 1200px) {
   .how-its-made-p {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.75;
     width: 463px;
     margin-top: 47px;
     margin-bottom: 45px;
+  }
+  .how-its-made-p .how-its-made-p-1 {
+    margin-bottom: 35px;
+  }
+  .how-its-made-p .how-its-made-p-2 {
+    margin-bottom: 27px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1406,7 +1433,6 @@ svg {
 
 .user-comment {
   position: relative;
-  background-color: #fafafa;
 }
 
 .user-comment-text,
@@ -1423,16 +1449,25 @@ svg {
   line-height: 1.857;
 }
 
-.user-comment-text {
-  text-decoration: underline solid #e1e1e1;
-}
-
 .quotes {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 54px;
   height: 40px;
   fill: #e1e1e1;
   z-index: -1;
+  transform: translate(20px, 30px);
+}
+@media screen and (min-width: 768px) {
+  .quotes {
+    transform: translate(20px, 15px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .quotes {
+    transform: translate(25px, 15px);
+  }
 }
 
 .dots {
@@ -1492,36 +1527,21 @@ svg {
 
 @media screen and (max-width: 767px) {
   .comments-slider {
-    margin-top: 80px;
-    padding: 80px 20px 86px 20px;
+    padding-top: 160px;
+    padding-bottom: 86px;
   }
 
   .user-photo {
     margin-bottom: 29px;
   }
 
-  .user-comment {
-    height: 308px;
-    padding-top: 37px;
-    padding-right: 50px;
-    padding-bottom: 26px;
-    padding-left: 50px;
-    margin-bottom: 30px;
-  }
-
   .user-comment-text {
-    width: 157px;
-    height: 239px;
     font-size: 12px;
     line-height: 2.583;
   }
 
   .user-name {
     margin-bottom: 30px;
-  }
-
-  .quotes {
-    transform: translateY(-255px);
   }
 
   .dots {
@@ -1534,28 +1554,12 @@ svg {
   }
 
   .comments-slider {
-    margin-top: 163px;
-    padding: 121px 74px 119px 74px;
-  }
-
-  .user-comment {
-    height: 164px;
-    padding-top: 43px;
-    padding-right: 50px;
-    padding-bottom: 20px;
-    padding-left: 50px;
-    margin-bottom: 24px;
+    padding: 284px 40px 119px 40px;
   }
 
   .user-comment-text {
-    width: 460px;
-    height: 83px;
     font-size: 14px;
     line-height: 2.143;
-  }
-
-  .quotes {
-    transform: translate(-40px, -107px);
   }
 
   .dots {
@@ -1572,32 +1576,35 @@ svg {
   }
 
   .comments-slider {
-    margin-top: 350px;
-    padding: 0px 177px;
+    padding: 0px 60px;
     padding-bottom: 132px;
-  }
-
-  .user-comment {
-    height: 138px;
-    padding: 32px 52px;
-    margin-bottom: 15px;
+    padding-top: 350px;
   }
 
   .user-comment-text {
-    width: 750px;
-    height: 52px;
     font-size: 16px;
     line-height: 1.875;
-  }
-
-  .quotes {
-    transform: translate(-35px, -78px);
   }
 
   .dots {
     margin-bottom: 15px;
   }
 }
+.user-comment-text {
+  background-color: #fafafa;
+  padding: 45px 50px 25px 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .user-comment-text {
+    padding: 32px 50px 32px 50px;
+  }
+}
+
+.box-shadow-underline {
+  box-shadow: 2px 0.3em 0px 0px #fafafa, -2px 0.3em 0px 0px #fafafa, 0px 0.4em 0px 0px #e1e1e1;
+}
+
 .contacts-section {
   background: #fff5f6;
   margin-top: 86px;
@@ -1614,6 +1621,8 @@ svg {
     padding-bottom: 165px;
     margin-top: 132px;
     background-image: url(/sectionbg2-1-min.429f410e.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 }
 
@@ -1654,7 +1663,7 @@ svg {
 
 .contacts-item {
   height: 427px;
-  background: #ffffff;
+  background: #fff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
   padding-top: 43px;
@@ -1714,7 +1723,7 @@ svg {
   text-align: center;
   align-items: center;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: #fff;
 }
 @media screen and (min-width: 768px) {
   .contacts-item-type {
@@ -1896,14 +1905,9 @@ svg {
   color: #907e82;
 }
 
-button {
-  margin: 0;
-}
-
 .contacts-buttons {
   display: block;
   justify-content: center;
-  padding-left: 79px;
   align-items: center;
   text-align: center;
   margin-top: 30px;
@@ -1934,6 +1938,7 @@ button {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.31;
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .contacts-btn {
@@ -1953,12 +1958,10 @@ button {
 .contacts-btn-svg {
   display: flex;
   margin-left: 10px;
-  width: 3.61px;
-  height: 8px;
 }
 
 .locations-svg {
-  fill: #ffffff;
+  stroke: #ffffff;
 }
 
 .locations {
@@ -1966,9 +1969,10 @@ button {
   justify-content: center;
   align-items: center;
   background: #d41342;
-  color: #ffffff;
+  color: #fff;
   padding-left: 18px;
   padding-right: 18px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .locations:focus, .locations:hover {
   background-color: #c7133e;
@@ -1980,11 +1984,26 @@ button {
   align-items: center;
   padding-left: 32px;
   padding-right: 32px;
-  background: #ffffff;
+  background: #fff;
   color: #d41443;
 }
 .franchise:focus, .franchise:hover {
   background-color: #ecebeb;
+}
+@media screen and (max-width: 767px) {
+  .franchise {
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .franchise {
+    margin-left: 14.5px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .franchise {
+    margin-left: 15px;
+  }
 }
 @media screen and (max-width: 767px) {
   .franchise {
