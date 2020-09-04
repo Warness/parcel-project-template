@@ -48,8 +48,8 @@
   color: $primary-accent-color;
 
   cursor: pointer;
-  @include transition(background-color); 
-  
+  @include transition(background-color);
+
   .greater-icon {
     margin-left: 12px;
   }
@@ -141,9 +141,11 @@
   align-items: center;
   background-color: transparent;
   border: none;
+  stroke: $primary-accent-color;
 
-  &:hover .icon-burger,
-  &:focus .icon-burger {
-    fill: $primary-white-color;
+  &:hover,
+  &:focus {
+    stroke: $primary-white-color;
+    cursor: pointer;
   }
 }
