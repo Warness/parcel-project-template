@@ -64,6 +64,7 @@
   &:focus,
   &:hover {
     background-color: #c7133e;
+    cursor: pointer;
   }
 }
 
@@ -79,6 +80,7 @@
   &:focus,
   &:hover {
     background-color: $background-grey-color;
+    cursor: pointer;
   }
 
   @media screen and (max-width: 767px) {
