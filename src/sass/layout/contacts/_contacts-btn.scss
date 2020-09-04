@@ -28,6 +28,7 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 1.31;
+  margin: 0 auto;
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -52,10 +53,10 @@
   justify-content: center;
   align-items: center;
   background: #d41342;
-  color: #ffffff;
+  color: $primary-white-color;
   padding-left: 18px;
   padding-right: 18px;
-
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:focus,
   &:hover {
     background-color: #c7133e;
@@ -68,18 +69,18 @@
   align-items: center;
   padding-left: 32px;
   padding-right: 32px;
-  background: #ffffff;
+  background: $primary-white-color;
   color: #d41443;
   &:focus,
   &:hover {
-    background-color: #ecebeb;
+    background-color: $background-grey-color;
   }
 
   @media screen and (max-width: 767px) {
     margin-top: 10px;
   }
   @media screen and (min-width: 768px) {
-    margin-left: 14, 5px;
+    margin-left: 14.5px;
   }
   @media screen and (min-width: 1200px) {
     margin-left: 15px;
