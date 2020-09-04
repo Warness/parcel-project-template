@@ -128,7 +128,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   color: $primary-white-color;
-  @include transition(color);
+  @include transition(color); // добавление перехода
 
   &:hover,
   &:focus {
