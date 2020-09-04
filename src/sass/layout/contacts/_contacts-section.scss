@@ -1,5 +1,5 @@
 .contacts-section {
-  background: #fff5f6;
+  background: $section-background-color;
   margin-top: 86px;
   padding-bottom: 113px;
 
@@ -11,5 +11,7 @@
     padding-bottom: 165px;
     margin-top: 132px;
     background-image: url(/images/sectionbg2-1-min.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 }
