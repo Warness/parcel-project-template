@@ -35,8 +35,8 @@
 <path fill="#000000" style="fill: var(--color5, #fff)" d="M32 16c0 2.039-1.653 3.692-3.692 3.692s-3.692-1.653-3.692-3.692c0-2.039 1.653-3.692 3.692-3.692s3.692 1.653 3.692 3.692z"></path>
 </symbol>
 <symbol id="header-close-icon" viewBox="0 0 16 16">
-<path d="M1.25928 1L14.7408 15" stroke="white"></path>
-<path d="M1 14.7407L15 1.25924" stroke="white"></path>
+<path d="M1.25928 1L14.7408 15"></path>
+<path d="M1 14.7407L15 1.25924"></path>
 </symbol>
 <symbol id="button-greater-icon" viewBox="0 0 8 10" fill="none">
 <path d="M1.10693 1L6.3648 5L1.10693 9" stroke="#D41443" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>

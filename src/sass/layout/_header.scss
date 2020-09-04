@@ -138,11 +138,14 @@
   align-items: center;
   background-color: transparent;
   border: none;
-  stroke: $primary-accent-color;
-  @include transition(stroke);
 
-  &:hover,
-  &:focus {
+  svg {
+    stroke: $primary-accent-color;
+    @include transition(stroke);
+  }
+
+  &:hover svg,
+  &:focus svg {
     stroke: $primary-white-color;
     cursor: pointer;
   }
