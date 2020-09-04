@@ -19,9 +19,9 @@
 .modal {
   top: 0%;
   left: 100%;
-  position: absolute;
+  position: fixed;
   width: 250px;
-  height: 502px;
+  height: 100%;
   background-color: #e17992;
   z-index: 5;
   transform: translateX(-100%);
@@ -29,7 +29,7 @@
 
   @media screen and (min-width: 768px) {
     width: 300px;
-    height: 1002px;
+    // height: 1002px;
   }
 }
 
