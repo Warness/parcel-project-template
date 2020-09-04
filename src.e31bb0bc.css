@@ -275,6 +275,7 @@ input {
   margin-bottom: 0px;
   list-style: none;
   padding: 0px;
+  margin: 0px;
 }
 
 a {
@@ -336,6 +337,8 @@ svg {
   text-align: center;
   color: #d41443;
   cursor: pointer;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-buy-btn .greater-icon {
   margin-left: 12px;
@@ -450,6 +453,7 @@ svg {
   position: absolute;
   top: 0;
   left: 0;
+  padding-top: 193px;
   background-image: url("/ice-cream-mobile.2a0702b5.svg");
   background-repeat: no-repeat;
   background-position: top 92px left 117px;
@@ -458,7 +462,6 @@ svg {
 .section-hero__title {
   margin: 0;
   padding: 0;
-  padding-top: 193px;
   margin-bottom: 19px;
   font-family: "Titan One", sans-serif;
   font-weight: 400;
@@ -537,13 +540,13 @@ svg {
   }
 
   .section-hero__container {
+    padding-top: 102px;
     background-image: url("/ice-cream-tablet.b7e3935b.svg"), url("/milk-tablet.ea6b9f80.svg"), url("/girl-tablet.f5f86707.svg");
     background-repeat: no-repeat;
     background-position: top 63px left 378px, left 34px bottom 28px, right 34px bottom;
   }
 
   .section-hero__title {
-    padding-top: 102px;
     margin-bottom: 20px;
     font-size: 22px;
     line-height: 1.13;
@@ -563,8 +566,8 @@ svg {
     display: block;
     margin: 0;
     padding: 0;
-    width: 255px;
-    padding-left: 120px;
+    width: 135px;
+    margin-left: 120px;
     font-weight: 400;
     font-size: 8px;
     line-height: 1.5;
@@ -665,13 +668,13 @@ svg {
   }
 
   .section-hero__container {
+    padding-top: 171px;
     background-image: url("/ice-cream-desktop.08ab184f.svg"), url("/milk-desktop.12cc9050.svg"), url("/girl-desktop.869fe817.svg");
     background-repeat: no-repeat;
     background-position: top 108px left 554px, left 37px bottom 45px, right 69px bottom;
   }
 
   .section-hero__title {
-    padding-top: 171px;
     margin-bottom: 25px;
     font-size: 38px;
     line-height: 1.15;
@@ -698,8 +701,8 @@ svg {
   }
 
   .section-hero__text {
-    width: 380px;
-    padding-left: 180px;
+    width: 220px;
+    margin-left: 180px;
     font-size: 14px;
     line-height: 1.4;
   }
@@ -708,7 +711,7 @@ svg {
     margin-top: 0;
     margin-left: 180px;
     margin-top: 20px;
-    margin-bottom: 56px;
+    margin-bottom: 54px;
     width: 26px;
     height: 26px;
   }
@@ -1113,14 +1116,12 @@ svg {
 
 .read-more-button {
   width: 176px;
-  height: 44px;
   background: #fff;
   border-radius: 22px;
   border-color: transparent;
   padding: 0;
   display: block;
   margin: 0 auto;
-  outline: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1476,28 +1477,28 @@ svg {
   align-items: center;
   min-width: 0;
 }
-
-.dot {
+.dots .dot {
   width: 4px;
   height: 4px;
   border-radius: 50%;
   background-color: #c7133e;
   min-width: 0;
 }
-.dot:not(:last-child) {
+.dots .dot:not(:last-child) {
   margin-right: 10px;
 }
 
-.comments-slider .slick-dots li {
+.slick-dots {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slick-dots li {
   list-style: none;
   outline: none;
 }
-
-.comments-slider .slick-dots li:not(:last-child) {
-  margin-right: 15px;
-}
-
-.comments-slider .slick-dots button:before {
+.slick-dots li button:before {
   display: block;
   font-size: 0;
   width: 12px;
@@ -1507,14 +1508,9 @@ svg {
   border: none;
   opacity: 1;
 }
-
-.slick-dots {
-  position: static;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.slick-dots li:not(:last-child) {
+  margin-right: 15px;
 }
-
 .slick-dots li.slick-active button:before {
   background-image: url(/slider-active-button.7773638b.svg);
   background-repeat: no-repeat;
@@ -1662,7 +1658,6 @@ svg {
 }
 
 .contacts-item {
-  height: 427px;
   background: #fff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
@@ -1673,7 +1668,6 @@ svg {
 }
 @media screen and (min-width: 768px) {
   .contacts-item {
-    height: 544px;
     padding-top: 50px;
     padding-left: 31px;
     padding-right: 30px;
@@ -1682,7 +1676,6 @@ svg {
 }
 @media screen and (min-width: 1200px) {
   .contacts-item {
-    height: 572px;
     padding-top: 51px;
     padding-left: 43px;
     padding-right: 44px;
@@ -1817,25 +1810,36 @@ svg {
 }
 
 .contacts-item-graph::after {
-  position: absolute;
   display: block;
   content: "";
   height: 0px;
   width: 100%;
   border: 1px solid #e1e1e1;
-  left: 0;
-  top: -32px;
+  margin-top: 30px;
+}
+@media screen and (max-width: 767px) {
+  .contacts-item-graph::after {
+    margin-bottom: 25px;
+  }
 }
 
 .contacts-item-graph::before {
-  position: absolute;
   display: block;
   content: "";
   height: 0px;
   width: 100%;
   border: 1px solid #e1e1e1;
-  left: 0;
-  top: 160px;
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 767px) {
+  .contacts-item-graph::before {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .contacts-item-graph::before {
+    margin-bottom: 25px;
+  }
 }
 
 .contacts-item-graph {
@@ -1846,30 +1850,30 @@ svg {
   line-height: 1.83;
   letter-spacing: 0.04em;
   color: #000;
-  margin-top: 50px;
+  margin-top: 25px;
   position: relative;
 }
 @media screen and (min-width: 768px) {
   .contacts-item-graph {
     font-size: 14px;
     line-height: 1.85;
-    margin-top: 60px;
+    margin-top: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .contacts-item-graph {
     font-size: 16px;
     line-height: 1.87;
-    margin-top: 64px;
+    margin-top: 32px;
   }
 }
 
 .graph-weekdays {
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 @media screen and (min-width: 1200px) {
   .graph-weekdays {
-    padding-bottom: 15px;
+    margin-bottom: 15px;
   }
 }
 
@@ -1880,20 +1884,20 @@ svg {
 .contacts-adress {
   font-size: 12px;
   line-height: 1.5;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 @media screen and (min-width: 768px) {
   .contacts-adress {
     font-size: 14px;
     line-height: 1.85;
-    margin-top: 60px;
+    margin-top: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .contacts-adress {
     font-size: 16px;
     line-height: 1.81;
-    margin-top: 64px;
+    margin-top: 32px;
   }
 }
 
@@ -1903,6 +1907,9 @@ svg {
   font-weight: 400;
   letter-spacing: 0.04em;
   color: #907e82;
+}
+.contacts-item-adress:hover {
+  text-decoration: underline;
 }
 
 .contacts-buttons {
@@ -1986,6 +1993,8 @@ svg {
   padding-right: 32px;
   background: #fff;
   color: #d41443;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .franchise:focus, .franchise:hover {
   background-color: #ecebeb;
@@ -2096,8 +2105,7 @@ svg {
   fill: #fea5bb;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-social-list-link-svg:hover,
-.footer-social-list-link-svg :focus {
+.footer-social-list-link-svg:hover, .footer-social-list-link-svg:focus {
   fill: #d41443;
 }
 
@@ -2127,6 +2135,9 @@ svg {
     line-height: 1.88;
     letter-spacing: 0.02em;
   }
+}
+.footer-address-link:hover {
+  text-decoration: underline;
 }
 
 .footer-invitation-container {
