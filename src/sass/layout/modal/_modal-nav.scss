@@ -3,7 +3,7 @@
 }
 
 .modal-item {
-height: 40px;
+  height: 40px;
   &:first-child {
     border-top: 1px solid #e18298;
   }
@@ -20,6 +20,7 @@ height: 40px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.29;
+  @include transition(color);
 
   &:focus,
   &:hover {
