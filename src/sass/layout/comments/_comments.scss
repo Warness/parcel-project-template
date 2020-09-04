@@ -55,29 +55,30 @@
   li {
     list-style: none;
     outline: none;
+    button:before {
+      display: block;
+      font-size: 0;
+      width: 12px;
+      height: 12px;
+      background-color: #d9d9d9;
+      border-radius: 50%;
+      border: none;
+      opacity: 1;
+    }
   }
   li:not(:last-child) {
     margin-right: 15px;
   }
-  button:before {
-    display: block;
-    font-size: 0;
-    width: 12px;
-    height: 12px;
-    background-color: #d9d9d9;
-    border-radius: 50%;
-    border: none;
+
+  li.slick-active button:before {
+    background-image: url(../images/slider-active-button.svg);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    background-color: transparent;
+    background-size: 12px;
+    border-radius: 0;
     opacity: 1;
   }
-}
-li.slick-active button:before {
-  background-image: url(../images/slider-active-button.svg);
-  background-repeat: no-repeat;
-  margin: 0 auto;
-  background-color: transparent;
-  background-size: 12px;
-  border-radius: 0;
-  opacity: 1;
 }
 
 @media screen and (max-width: 767px) {
