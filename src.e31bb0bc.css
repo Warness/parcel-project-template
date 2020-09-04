@@ -448,15 +448,70 @@ svg {
   background-color: #ffa5ba;
   border-radius: 50%;
 }
+@media screen and (min-width: 768px) {
+  .section-hero__background {
+    width: 768px;
+    padding-top: 31px;
+    padding-left: 307px;
+    padding-right: 137px;
+    padding-bottom: 46px;
+  }
+  .section-hero__background::before {
+    width: 324px;
+    height: 322px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-hero__background {
+    width: 1200px;
+    padding-top: 52px;
+    padding-left: 435px;
+    padding-right: 227px;
+    padding-bottom: 75px;
+  }
+  .section-hero__background::before {
+    width: 538px;
+    height: 538px;
+  }
+}
 
 .section-hero__container {
   position: absolute;
   top: 0;
   left: 0;
   padding-top: 193px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-image: url("/ice-cream-mobile.2a0702b5.svg");
   background-repeat: no-repeat;
   background-position: top 92px left 117px;
+}
+@media screen and (min-width: 320px) {
+  .section-hero__container {
+    width: 320px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-hero__container {
+    width: 768px;
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-top: 102px;
+    background-image: url("/ice-cream-tablet.b7e3935b.svg"), url("/milk-tablet.ea6b9f80.svg"), url("/girl-tablet.f5f86707.svg");
+    background-repeat: no-repeat;
+    background-position: top 63px left 378px, left 34px bottom 28px, right 34px bottom;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-hero__container {
+    width: 1200px;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 171px;
+    background-image: url("/ice-cream-desktop.08ab184f.svg"), url("/milk-desktop.12cc9050.svg"), url("/girl-desktop.869fe817.svg");
+    background-repeat: no-repeat;
+    background-position: top 108px left 554px, left 37px bottom 45px, right 69px bottom;
+  }
 }
 
 .section-hero__title {
@@ -471,21 +526,62 @@ svg {
   text-transform: uppercase;
   color: #fff;
 }
-.section-hero__title .section-hero__title--color {
+.section-hero__title--color {
   font-size: 48px;
   line-height: 0.95;
   color: #d41443;
   letter-spacing: 0;
+}
+@media screen and (min-width: 768px) {
+  .section-hero__title {
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 1.13;
+  }
+  .section-hero__title--color {
+    font-size: 34px;
+    line-height: 0.91;
+    letter-spacing: 0.04em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-hero__title {
+    margin-bottom: 25px;
+    font-size: 38px;
+    line-height: 1.15;
+  }
+  .section-hero__title--color {
+    font-size: 58px;
+    line-height: 0.89;
+  }
 }
 
 .section-hero__list-btn {
   display: flex;
   padding-bottom: 160px;
 }
-.section-hero__list-btn .section-hero__item-link:not(:last-child) {
+@media screen and (min-width: 768px) {
+  .section-hero__list-btn {
+    padding-bottom: 0;
+    margin-bottom: 66px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-hero__list-btn {
+    margin-bottom: 112px;
+  }
+}
+
+.section-hero__item-link:not(:last-child) {
   margin-right: 8px;
 }
-.section-hero__list-btn .section-hero__link {
+@media screen and (min-width: 1200px) {
+  .section-hero__item-link:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.section-hero__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -500,68 +596,139 @@ svg {
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.section-hero__list-btn .section-hero__link:hover,
-.section-hero__list-btn .section-hero__link:focus {
+@media screen and (min-width: 1200px) {
+  .section-hero__link {
+    width: 104px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 1.28;
+  }
+}
+
+.section-hero__link:hover,
+.section-hero__link:focus {
   background-color: #c7133e;
 }
-.section-hero__list-btn .section-hero__link--color {
+
+.section-hero__link--color {
   width: 83px;
   color: #d41443;
   background-color: #fff;
 }
-.section-hero__list-btn .section-hero__link--color:hover,
-.section-hero__list-btn .section-hero__link--color:focus {
+@media screen and (min-width: 1200px) {
+  .section-hero__link--color {
+    width: 138px;
+  }
+}
+
+.section-hero__link--color:hover,
+.section-hero__link--color:focus {
   background-color: #ecebeb;
 }
 
 .section-hero__list-branches {
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .section-hero__list-branches {
+    position: absolute;
+    top: 94px;
+    right: 43px;
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-hero__list-branches {
+    top: 156px;
+    right: 75px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-hero__item-branches {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  .section-hero__item-branches::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -9px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  .section-hero__item-branches:first-child {
+    margin-bottom: 13px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-hero__item-branches {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  .section-hero__item-branches::before {
+    position: absolute;
+    top: -5px;
+    right: -16px;
+    width: 30px;
+    height: 30px;
+  }
+  .section-hero__item-branches:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-hero__branches-count {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.14;
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #d41443;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-hero__branches-count {
+    margin-bottom: 2px;
+    font-size: 46px;
+    line-height: 1.15;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-hero__branches-text {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    text-align: right;
+    color: #fff;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-hero__branches-text {
+    font-size: 14px;
+    line-height: 1.28;
+  }
+}
 
 .section-hero__text {
   display: none;
 }
-
-.section-hero__icon-link {
-  display: none;
-}
-
 @media screen and (min-width: 768px) {
-  .section-hero__background {
-    width: 768px;
-    padding-top: 31px;
-    padding-left: 307px;
-    padding-right: 137px;
-    padding-bottom: 46px;
-  }
-  .section-hero__background::before {
-    width: 324px;
-    height: 322px;
-  }
-
-  .section-hero__container {
-    padding-top: 102px;
-    background-image: url("/ice-cream-tablet.b7e3935b.svg"), url("/milk-tablet.ea6b9f80.svg"), url("/girl-tablet.f5f86707.svg");
-    background-repeat: no-repeat;
-    background-position: top 63px left 378px, left 34px bottom 28px, right 34px bottom;
-  }
-
-  .section-hero__title {
-    margin-bottom: 20px;
-    font-size: 22px;
-    line-height: 1.13;
-  }
-  .section-hero__title .section-hero__title--color {
-    font-size: 34px;
-    line-height: 0.91;
-    letter-spacing: 0.04em;
-  }
-
-  .section-hero__list-btn {
-    padding-bottom: 0;
-    margin-bottom: 66px;
-  }
-
   .section-hero__text {
     display: block;
     margin: 0;
@@ -573,7 +740,20 @@ svg {
     line-height: 1.5;
     color: #fff;
   }
+}
+@media screen and (min-width: 1200px) {
+  .section-hero__text {
+    width: 220px;
+    margin-left: 180px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
 
+.section-hero__icon-link {
+  display: none;
+}
+@media screen and (min-width: 768px) {
   .section-hero__icon-link {
     display: flex;
     justify-content: center;
@@ -591,122 +771,8 @@ svg {
   .section-hero__icon-link:hover, .section-hero__icon-link:focus {
     background-color: #d41443;
   }
-
-  .section-hero__icon {
-    width: 5px;
-    height: 5px;
-    fill: #d41443;
-  }
-  .section-hero__icon-link:hover .section-hero__icon, .section-hero__icon-link:focus .section-hero__icon {
-    fill: #fff;
-  }
-
-  .section-hero__list-branches {
-    position: absolute;
-    top: 94px;
-    right: 43px;
-    display: block;
-  }
-
-  .section-hero__item-branches {
-    position: relative;
-    margin: 0;
-    padding: 0;
-  }
-  .section-hero__item-branches::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    right: -9px;
-    display: block;
-    width: 16px;
-    height: 16px;
-    background-color: #fff;
-    border-radius: 50%;
-  }
-
-  .section-hero__item-branches:first-child {
-    margin-bottom: 13px;
-  }
-
-  .section-hero__branches-count {
-    position: relative;
-    z-index: 1;
-    margin: 0;
-    padding: 0;
-    font-family: "Titan One", sans-serif;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 1.14;
-    text-align: right;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #d41443;
-  }
-
-  .section-hero__branches-text {
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
-    font-size: 8px;
-    line-height: 1.25;
-    text-align: right;
-    color: #fff;
-  }
 }
 @media screen and (min-width: 1200px) {
-  .section-hero__background {
-    width: 1200px;
-    padding-top: 52px;
-    padding-left: 435px;
-    padding-right: 227px;
-    padding-bottom: 75px;
-  }
-  .section-hero__background::before {
-    width: 538px;
-    height: 538px;
-  }
-
-  .section-hero__container {
-    padding-top: 171px;
-    background-image: url("/ice-cream-desktop.08ab184f.svg"), url("/milk-desktop.12cc9050.svg"), url("/girl-desktop.869fe817.svg");
-    background-repeat: no-repeat;
-    background-position: top 108px left 554px, left 37px bottom 45px, right 69px bottom;
-  }
-
-  .section-hero__title {
-    margin-bottom: 25px;
-    font-size: 38px;
-    line-height: 1.15;
-  }
-  .section-hero__title .section-hero__title--color {
-    font-size: 58px;
-    line-height: 0.89;
-  }
-
-  .section-hero__list-btn {
-    margin-bottom: 112px;
-  }
-  .section-hero__list-btn .section-hero__item-link:not(:last-child) {
-    margin-right: 15px;
-  }
-  .section-hero__list-btn .section-hero__link {
-    width: 104px;
-    height: 40px;
-    font-size: 14px;
-    line-height: 1.28;
-  }
-  .section-hero__list-btn .section-hero__link--color {
-    width: 138px;
-  }
-
-  .section-hero__text {
-    width: 220px;
-    margin-left: 180px;
-    font-size: 14px;
-    line-height: 1.4;
-  }
-
   .section-hero__icon-link {
     margin-top: 0;
     margin-left: 180px;
@@ -715,66 +781,22 @@ svg {
     width: 26px;
     height: 26px;
   }
-
-  .section-hero__icon {
-    width: 8px;
-    height: 8px;
-  }
-
-  .section-hero__list-branches {
-    top: 156px;
-    right: 75px;
-  }
-
-  .section-hero__item-branches {
-    position: relative;
-    margin: 0;
-    padding: 0;
-  }
-  .section-hero__item-branches::before {
-    position: absolute;
-    top: -5px;
-    right: -16px;
-    width: 30px;
-    height: 30px;
-  }
-
-  .section-hero__item-branches:first-child {
-    margin-bottom: 20px;
-  }
-
-  .section-hero__branches-count {
-    margin-bottom: 2px;
-    font-size: 46px;
-    line-height: 1.15;
-  }
-
-  .section-hero__branches-text {
-    font-size: 14px;
-    line-height: 1.28;
-  }
 }
-.section-hero__container {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-@media screen and (min-width: 320px) {
-  .section-hero__container {
-    width: 320px;
-  }
-}
+
 @media screen and (min-width: 768px) {
-  .section-hero__container {
-    width: 768px;
-    padding-left: 34px;
-    padding-right: 34px;
+  .section-hero__icon {
+    width: 5px;
+    height: 5px;
+    fill: #d41443;
+  }
+  .section-hero__icon-link:hover .section-hero__icon, .section-hero__icon-link:focus .section-hero__icon {
+    fill: #fff;
   }
 }
 @media screen and (min-width: 1200px) {
-  .section-hero__container {
-    width: 1200px;
-    padding-left: 75px;
-    padding-right: 75px;
+  .section-hero__icon {
+    width: 8px;
+    height: 8px;
   }
 }
 
