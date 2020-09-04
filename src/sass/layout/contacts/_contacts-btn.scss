@@ -75,6 +75,7 @@
   padding-right: 32px;
   background: $primary-white-color;
   color: #d41443;
+  @include transition(background-color);
   &:focus,
   &:hover {
     background-color: $background-grey-color;

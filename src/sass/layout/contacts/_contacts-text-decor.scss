@@ -99,9 +99,9 @@
   }
 }
 .graph-weekdays {
-  padding-bottom: 10px;
+  margin-bottom: 10px;
   @media screen and (min-width: 1200px) {
-    padding-bottom: 15px;
+    margin-bottom: 15px;
   }
 }
 .time {
@@ -131,4 +131,7 @@
   font-weight: 400;
   letter-spacing: 0.04em;
   color: $text-grey-color;
+  &:hover {
+    text-decoration: underline;
+  }
 }
