@@ -428,6 +428,7 @@ svg {
 
 .section-hero {
   position: relative;
+  overflow: hidden;
   margin: 0 auto;
   background-color: #ffb8ca;
 }
@@ -479,6 +480,7 @@ svg {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   padding-top: 193px;
   padding-left: 20px;
   padding-right: 20px;
