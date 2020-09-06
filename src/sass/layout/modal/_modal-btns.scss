@@ -5,14 +5,16 @@
   margin-left: auto;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   svg {
-    fill: $primary-white-color;
+    stroke: $primary-white-color;
+    @include transition(stroke);
   }
 
   &:focus svg,
   &:hover svg {
-    fill: $primary-black-color;
+    stroke: $primary-black-color;
   }
 }
 
@@ -39,6 +41,9 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 1.31;
+
+  @include transition(background-color);
+  cursor: pointer;
 
   &:hover {
     background-color: #ecebeb;

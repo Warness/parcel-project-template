@@ -48,8 +48,8 @@
   color: $primary-accent-color;
 
   cursor: pointer;
-  @include transition(background-color); 
-  
+  @include transition(background-color);
+
   .greater-icon {
     margin-left: 12px;
   }
@@ -80,10 +80,6 @@
   .header-container {
     margin-top: 37px;
     // padding-top: 37px;
-  }
-
-  .logo-link {
-    flex-grow: 2;
   }
 
   .menu-wrapper-list {
@@ -138,12 +134,19 @@
 }
 
 .burger-btn {
+  margin-left: auto;
   align-items: center;
   background-color: transparent;
   border: none;
 
-  &:hover .icon-burger,
-  &:focus .icon-burger {
-    fill: $primary-white-color;
+  svg {
+    stroke: $primary-accent-color;
+    @include transition(stroke);
+  }
+
+  &:hover svg,
+  &:focus svg {
+    stroke: $primary-white-color;
+    cursor: pointer;
   }
 }
