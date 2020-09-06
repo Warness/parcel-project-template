@@ -366,10 +366,6 @@ svg {
     margin-top: 37px;
   }
 
-  .logo-link {
-    flex-grow: 2;
-  }
-
   .menu-wrapper-list {
     display: none;
   }
@@ -418,12 +414,19 @@ svg {
 }
 
 .burger-btn {
+  margin-left: auto;
   align-items: center;
   background-color: transparent;
   border: none;
 }
-.burger-btn:hover .icon-burger, .burger-btn:focus .icon-burger {
-  fill: #fff;
+.burger-btn svg {
+  stroke: #d41443;
+  -webkit-transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.burger-btn:hover svg, .burger-btn:focus svg {
+  stroke: #fff;
+  cursor: pointer;
 }
 
 .section-hero {
@@ -2263,6 +2266,8 @@ svg {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.29;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-link:focus, .modal-link:hover {
   color: #d41443;
@@ -2276,12 +2281,15 @@ svg {
   margin-left: auto;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 .modal-close-btn svg {
-  fill: #fff;
+  stroke: #fff;
+  -webkit-transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn:focus svg, .modal-close-btn:hover svg {
-  fill: #000;
+  stroke: #000;
 }
 
 .buy-now-btn {
@@ -2301,6 +2309,9 @@ svg {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.31;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 .buy-now-btn:hover {
   background-color: #ecebeb;
